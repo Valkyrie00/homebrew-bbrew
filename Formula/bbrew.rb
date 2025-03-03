@@ -5,20 +5,20 @@
 class Bbrew < Formula
   desc "A simple TUI tool to make your brews bold."
   homepage "https://github.com/Valkyrie00/bold-brew"
-  version "1.3.1"
+  version "1.4.0"
   depends_on :macos
 
   if Hardware::CPU.intel?
-    url "https://github.com/Valkyrie00/bold-brew/releases/download/v1.3.1/bbrew_1.3.1_darwin_amd64.tar.gz"
-    sha256 "9de7e6c40e38693cfb771d7f72ceaa30f1d2b94a2b6ebe1b0c6bd1a9fbc2f32f"
+    url "https://github.com/Valkyrie00/bold-brew/releases/download/v1.4.0/bbrew_1.4.0_darwin_amd64.tar.gz"
+    sha256 "ffb7696065d2df7ee83562cb08ab53c1b1ec0627da4911dc809b83d4c481b431"
 
     def install
       bin.install "bbrew"
     end
   end
   if Hardware::CPU.arm?
-    url "https://github.com/Valkyrie00/bold-brew/releases/download/v1.3.1/bbrew_1.3.1_darwin_arm64.tar.gz"
-    sha256 "a7bb7f0fda258332cc1b2ab497f98ae9aed3da57688ba0d4ba027800f81b3b4a"
+    url "https://github.com/Valkyrie00/bold-brew/releases/download/v1.4.0/bbrew_1.4.0_darwin_arm64.tar.gz"
+    sha256 "2c1f9d0aafaa75619c81e3e006389bae04c5d2c2ef8697e193f4d7d548560963"
 
     def install
       bin.install "bbrew"
