@@ -5,23 +5,41 @@
 class Bbrew < Formula
   desc "A simple TUI tool to make your homebrew bold."
   homepage "https://github.com/Valkyrie00/bold-brew"
-  version "1.7.1"
-  depends_on :macos
+  version "1.8.0"
 
-  if Hardware::CPU.intel?
-    url "https://github.com/Valkyrie00/bold-brew/releases/download/v1.7.1/bbrew_1.7.1_darwin_amd64.tar.gz"
-    sha256 "f6e5cad4beb93f7f81a33ed3b071fc4b09134ccbcf53592e116533f52b27df58"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/Valkyrie00/bold-brew/releases/download/v1.8.0/bbrew_1.8.0_darwin_amd64.tar.gz"
+      sha256 "59504099c6815e92fe790fb7c5d87d1fc65b77e3be6f217d8af72e68e9526d81"
 
-    def install
-      bin.install "bbrew"
+      def install
+        bin.install "bbrew"
+      end
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/Valkyrie00/bold-brew/releases/download/v1.8.0/bbrew_1.8.0_darwin_arm64.tar.gz"
+      sha256 "98dd8a24ca7efc7019a8056f322c7c3e868d93fb35a39e5235f773853a765f63"
+
+      def install
+        bin.install "bbrew"
+      end
     end
   end
-  if Hardware::CPU.arm?
-    url "https://github.com/Valkyrie00/bold-brew/releases/download/v1.7.1/bbrew_1.7.1_darwin_arm64.tar.gz"
-    sha256 "7a0015f3e6ac36c8a6b2128ca9d7d529bda89b8c9f15a04e6241bbad90a592c8"
 
-    def install
-      bin.install "bbrew"
+  on_linux do
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://github.com/Valkyrie00/bold-brew/releases/download/v1.8.0/bbrew_1.8.0_linux_amd64.tar.gz"
+      sha256 "a9c1ec72035a11e97e6e4d444be8f5db36196236ed964a66a44ee472a484a81f"
+      def install
+        bin.install "bbrew"
+      end
+    end
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://github.com/Valkyrie00/bold-brew/releases/download/v1.8.0/bbrew_1.8.0_linux_arm64.tar.gz"
+      sha256 "284143d32290f02649dae97ae73d8ded35ed2c354a9e3c29c081648df508d78f"
+      def install
+        bin.install "bbrew"
+      end
     end
   end
 
