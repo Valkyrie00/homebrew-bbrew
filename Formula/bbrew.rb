@@ -5,20 +5,20 @@
 class Bbrew < Formula
   desc "A simple TUI tool to make your homebrew bold."
   homepage "https://github.com/Valkyrie00/bold-brew"
-  version "2.1.0"
+  version "2.1.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Valkyrie00/bold-brew/releases/download/v2.1.0/bbrew_2.1.0_darwin_amd64.tar.gz"
-      sha256 "1b8f13ad1fb386f57fb4ef6afaf4a10b9238438e4dc22d7f9d3f16ec6c22a6fd"
+      url "https://github.com/Valkyrie00/bold-brew/releases/download/v2.1.1/bbrew_2.1.1_darwin_amd64.tar.gz"
+      sha256 "fadfc891209e53f7853287e34647283a3803cda8cd357277ccb9de6c0da28fd4"
 
       def install
         bin.install "bbrew"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Valkyrie00/bold-brew/releases/download/v2.1.0/bbrew_2.1.0_darwin_arm64.tar.gz"
-      sha256 "41bb9ae12ca87a4b9083aca35e974ec5dd04c5fb360e751f79fb048b7c6d659b"
+      url "https://github.com/Valkyrie00/bold-brew/releases/download/v2.1.1/bbrew_2.1.1_darwin_arm64.tar.gz"
+      sha256 "293d80bb5be01a8a482689575055f0ddfd754b06b3960fec2b6388a3c75a43df"
 
       def install
         bin.install "bbrew"
@@ -28,15 +28,15 @@ class Bbrew < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Valkyrie00/bold-brew/releases/download/v2.1.0/bbrew_2.1.0_linux_amd64.tar.gz"
-      sha256 "37cae6246bd3dedc7b26340aecafbb538b9e1a833317d6a454e91abe0f908a96"
+      url "https://github.com/Valkyrie00/bold-brew/releases/download/v2.1.1/bbrew_2.1.1_linux_amd64.tar.gz"
+      sha256 "3ccfb6c661106dd27d7338c2ff8f6978af62782ec0f151412211ce0242d40808"
       def install
         bin.install "bbrew"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Valkyrie00/bold-brew/releases/download/v2.1.0/bbrew_2.1.0_linux_arm64.tar.gz"
-      sha256 "b6852980b140f525a52e2a826c9c37323c01726e01dd7aadfc2e29d70d103b53"
+      url "https://github.com/Valkyrie00/bold-brew/releases/download/v2.1.1/bbrew_2.1.1_linux_arm64.tar.gz"
+      sha256 "e5d02686a347326f5bbaf7d7fa8af65cd486a43c886d9e6b65ec37d0edf54e61"
       def install
         bin.install "bbrew"
       end
